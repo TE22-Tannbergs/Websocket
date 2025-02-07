@@ -53,12 +53,15 @@ class WebSocketClient
         {
             WebSocketReceiveResult result = await client.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
             
-            if (result.MessageType == WebSocketMessageType.Text)
+            int No1mesg = 0;
+
+            if (result.MessageType == WebSocketMessageType.Text && No1mesg != 0)
             {
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
                 handleMessage("echo",receivedMessage);
                 await Send(client);
             }
+            No1mesg++;
         }
     }
 }
