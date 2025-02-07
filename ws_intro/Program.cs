@@ -49,11 +49,12 @@ class WebSocketClient
         ClientWebSocket client = new ClientWebSocket();
         await client.ConnectAsync(new Uri(serverUri), CancellationToken.None);
         byte[] receiveBuffer = new byte[1024];
+        int No1mesg = 0;
         while (client.State == WebSocketState.Open)
         {
             WebSocketReceiveResult result = await client.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
             
-            int No1mesg = 0;
+            
 
             if (result.MessageType == WebSocketMessageType.Text && No1mesg != 0)
             {
