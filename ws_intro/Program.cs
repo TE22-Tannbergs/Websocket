@@ -31,7 +31,7 @@ class WebSocketClient
         // Se exempel i filen log.example
     }
     static async Task Send(ClientWebSocket client){
-        Console.WriteLine("Skriv in ett meddelande att skicka:");
+        Console.WriteLine("Write your message:");
         string message = Console.ReadLine();
         byte[] buffer = Encoding.UTF8.GetBytes(message);
         await client.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
