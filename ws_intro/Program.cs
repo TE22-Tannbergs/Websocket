@@ -27,7 +27,8 @@ class WebSocketClient
     static void handleMessage(string user, string msg){
         // funktionen saknar både funktionskropp och funktionshuvud (dvs nödvändiga parametrar)
         using(StreamWriter w = File.AppendText("chat.log")){
-            Console.WriteLine($"{DateTime.Now} {user} | {msg}");
+          /*   Console.WriteLine($"{DateTime.Now} {user} | {msg}"); */
+          Console.WriteLine(msg);
             log(msg, user, w);
         }
     }
