@@ -24,11 +24,15 @@ using Microsoft.VisualBasic;
 */
 class WebSocketClient
 {
-    static void handleMessage(string user, string msg){
+    static void handleMessage(string user, string msg, bool write){
         // funktionen saknar både funktionskropp och funktionshuvud (dvs nödvändiga parametrar)
-        using(StreamWriter w = File.AppendText("chat.log")){
+        if(write){
+             using(StreamWriter w = File.AppendText("chat.log")){
+
             Console.WriteLine($"{DateTime.Now} {user} | {msg}");
             log(msg, user, w);
+        }
+       
         }
     }
     static void log(string msg,string user,StreamWriter w){
@@ -40,7 +44,7 @@ class WebSocketClient
         Console.WriteLine("Skriv in ett meddelande att skicka:");
         string message = Console.ReadLine();
         byte[] buffer = Encoding.UTF8.GetBytes(message);
-        handleMessage("pelle", message);
+        handleMessage("pelle", message, true);
         await client.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
     }
     public static async Task Main()
@@ -60,11 +64,11 @@ class WebSocketClient
             {
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
                 
-                if(No1mesg != 0){
+                
                     Console.WriteLine("inne i IF-satsen");
-                    //handleMessage("echo",receivedMessage);
+                    handleMessage("echo",receivedMessage,No1mesg != 0);
                 await Send(client);
-                }
+                
                 No1mesg++;
             }
             
