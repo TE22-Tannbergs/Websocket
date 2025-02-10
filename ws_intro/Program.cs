@@ -56,13 +56,16 @@ class WebSocketClient
             
             
 
-            if (result.MessageType == WebSocketMessageType.Text && No1mesg > 1)
+            if (result.MessageType == WebSocketMessageType.Text)
             {
-                string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
+                if(No1mesg != 0){
+                    string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
                 handleMessage("echo",receivedMessage);
                 await Send(client);
+                }
+                No1mesg++;
             }
-            No1mesg++;
+            
         }
     }
 }
