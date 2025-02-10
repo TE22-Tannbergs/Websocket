@@ -64,9 +64,9 @@ class WebSocketClient
                     handleMessage("echo",receivedMessage);
                 await Send(client);
                 }
-                
+                No1mesg++;
             }
-            No1mesg++;
+            
         }
     }
 }
