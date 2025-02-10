@@ -27,8 +27,7 @@ class WebSocketClient
     static void handleMessage(string user, string msg){
         // funktionen saknar både funktionskropp och funktionshuvud (dvs nödvändiga parametrar)
         using(StreamWriter w = File.AppendText("chat.log")){
-          /*   Console.WriteLine($"{DateTime.Now} {user} | {msg}"); */
-          Console.WriteLine(msg);
+            Console.WriteLine($"{DateTime.Now} {user} | {msg}");
             log(msg, user, w);
         }
     }
@@ -57,18 +56,13 @@ class WebSocketClient
             
             
 
-            if (result.MessageType == WebSocketMessageType.Text)
+            if (result.MessageType == WebSocketMessageType.Text && No1mesg != 0)
             {
-                
-                    string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
-                    if(result.Count > 0){
-                          handleMessage("echo",receivedMessage);
+                string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
+                handleMessage("echo",receivedMessage);
                 await Send(client);
-                    }
-              
-               
             }
-            
+            No1mesg++;
         }
     }
 }
