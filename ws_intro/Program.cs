@@ -66,7 +66,7 @@ class WebSocketClient
                 }
                 
             }
-            Console.WriteLine(No1mesg++);
+            No1mesg++;
         }
     }
 }
