@@ -62,7 +62,7 @@ class WebSocketClient
                 handleMessage("echo",receivedMessage);
                 await Send(client);
             }
-            No1mesg++;
+            Console.WriteLine(No1mesg++);
         }
     }
 }
