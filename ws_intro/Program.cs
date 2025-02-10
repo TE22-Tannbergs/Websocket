@@ -65,7 +65,7 @@ class WebSocketClient
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
                 
                 
-                    Console.WriteLine("inne i IF-satsen");
+                    
                     handleMessage("echo",receivedMessage,No1mesg != 0);
                 await Send(client);
                 
