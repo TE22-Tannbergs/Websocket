@@ -61,7 +61,7 @@ class WebSocketClient
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
                 
                 if(No1mesg != 0){
-                    handleMessage("echo",receivedMessage);
+                    //handleMessage("echo",receivedMessage);
                 await Send(client);
                 }
                 No1mesg++;
