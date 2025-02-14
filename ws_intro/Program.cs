@@ -27,6 +27,7 @@ class WebSocketClient
         // funktionen saknar både funktionskropp och funktionshuvud (dvs nödvändiga parametrar)
         StreamWriter w = File.AppendText("log.txt");
         log(message, user, w);
+        w.Close();
     }
     static void log(string msg,string user,StreamWriter w){
         // Funktionen ska skriva: <nuvarande klockslag> <user> | <msg> till en logfil som definieras av w.
