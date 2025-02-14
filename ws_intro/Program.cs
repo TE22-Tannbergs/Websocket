@@ -51,7 +51,7 @@ class WebSocketClient
         while (client.State == WebSocketState.Open)
         {
             WebSocketReceiveResult result = await client.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
-            Console.Clear();
+           // Console.Clear();
             if (result.MessageType == WebSocketMessageType.Text)
             {
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
