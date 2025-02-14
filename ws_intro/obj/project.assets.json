@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jn5223\\.nuget\\packages\\": {}
+    "C:\\Users\\le1244\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj",
+      "projectUniqueName": "C:\\Users\\le1244\\OneDrive - LYSTKOM\\prg 2\\Projekt\\Websocket\\ws_intro\\ws_intro.csproj",
       "projectName": "ws_intro",
-      "projectPath": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj",
-      "packagesPath": "C:\\Users\\jn5223\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\obj\\",
+      "projectPath": "C:\\Users\\le1244\\OneDrive - LYSTKOM\\prg 2\\Projekt\\Websocket\\ws_intro\\ws_intro.csproj",
+      "packagesPath": "C:\\Users\\le1244\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\le1244\\OneDrive - LYSTKOM\\prg 2\\Projekt\\Websocket\\ws_intro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jn5223\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\le1244\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
