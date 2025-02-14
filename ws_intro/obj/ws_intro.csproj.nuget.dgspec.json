@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj": {}
+    "C:\\Users\\hg8352\\OneDrive - LYSTKOM\\Programering\\websocket\\ws_intro\\ws_intro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj": {
+    "C:\\Users\\hg8352\\OneDrive - LYSTKOM\\Programering\\websocket\\ws_intro\\ws_intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj",
+        "projectUniqueName": "C:\\Users\\hg8352\\OneDrive - LYSTKOM\\Programering\\websocket\\ws_intro\\ws_intro.csproj",
         "projectName": "ws_intro",
-        "projectPath": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\ws_intro.csproj",
-        "packagesPath": "C:\\Users\\jn5223\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jn5223\\OneDrive - LYSTKOM\\kurser\\prg2\\Nätverksprogrammering\\Websocket\\ws_intro\\obj\\",
+        "projectPath": "C:\\Users\\hg8352\\OneDrive - LYSTKOM\\Programering\\websocket\\ws_intro\\ws_intro.csproj",
+        "packagesPath": "C:\\Users\\hg8352\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hg8352\\OneDrive - LYSTKOM\\Programering\\websocket\\ws_intro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jn5223\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hg8352\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
