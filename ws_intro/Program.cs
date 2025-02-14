@@ -23,16 +23,22 @@ using System.Text;
 */
 class WebSocketClient
 {
-    static void handleMessage(){
+    static void handleMessage(string message, string user){
         // funktionen saknar både funktionskropp och funktionshuvud (dvs nödvändiga parametrar)
+        StreamWriter w = File.AppendText("log.txt");
+        log(message, user, w);
     }
     static void log(string msg,string user,StreamWriter w){
         // Funktionen ska skriva: <nuvarande klockslag> <user> | <msg> till en logfil som definieras av w.
         // Se exempel i filen log.example
+            w.WriteLine($"{DateTime.Now.ToLongTimeString()}, {user} | {msg}");
+
+
     }
     static async Task Send(ClientWebSocket client){
         Console.WriteLine("Write your message:");
         string message = Console.ReadLine();
+        handleMessage(message, "VH");
         byte[] buffer = Encoding.UTF8.GetBytes(message);
         await client.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
     }
@@ -49,6 +55,7 @@ class WebSocketClient
             if (result.MessageType == WebSocketMessageType.Text)
             {
                 string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, result.Count);
+                handleMessage(receivedMessage, "Echo");
                 await Send(client);
             }
         }
